@@ -1,0 +1,40 @@
+so uhhh how to make cool songs with this thingy
+
+soooo
+first, split your song into around 23 minute sections and mark inst in sections and vocals as well
+eg
+Inst0.ogg
+Inst1.ogg
+Voices0.ogg
+Voices1.ogg
+
+etc
+
+
+a value you need to know is that this is considered
+1 max parts
+why?
+programming likes stuff starting at 0 and not 1
+and im too lazy to change it
+so aka if 3 audio files would be considered as 2 max parts
+
+
+in the chart editor in the song section, 2 new things been added
+
+has Extra Parts checkbox
+
+and
+
+maxParts number increase thing
+
+
+so
+
+the has extra Parts checkbox needs to be checked for the game to search for more parts and acknowledge them
+max parts is the highest number thing i mentioned earlier
+reload the audio for it to then get the audios
+
+
+ok 1 thing you should keep in mind is that this will eat lots of memory so be prepared (it preloads all the extra parts for quick swapping)
+reloading the audio when you're in a extra part could cause issues as im too lazy to make something for that 
+
