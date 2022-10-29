@@ -1,5 +1,11 @@
 # hi guys
 
+check releases tab for download
+
+[or click this text](https://github.com/RafPlayz69YT/psych-engine-0.6.2-long-song-support/releases)
+
+
+
 it seems people want this sooo i made it
 
 anyways this allows you to run long songs ig
