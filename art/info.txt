@@ -38,3 +38,5 @@ reload the audio for it to then get the audios
 ok 1 thing you should keep in mind is that this will eat lots of memory so be prepared (it preloads all the extra parts for quick swapping)
 reloading the audio when you're in a extra part could cause issues as im too lazy to make something for that 
 
+theres also a test song in the files showing this off (maxParts is 1 for that song)
+not really made by me just a midi change thing
