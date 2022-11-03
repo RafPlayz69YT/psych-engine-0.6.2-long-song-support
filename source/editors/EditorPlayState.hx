@@ -65,6 +65,7 @@ class EditorPlayState extends MusicBeatState
 					if (this.startPos < FlxG.sound.music.length + extraStuff)
 					{
 						curPart = part;
+						extraPart = extraStuff;
 						break;
 					}
 					extraStuff += FlxG.sound.music.length;
