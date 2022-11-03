@@ -62,7 +62,7 @@ class EditorPlayState extends MusicBeatState
 				for (part in 1...maxParts + 1)
 				{
 					FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song, part), 0);
-					if (this.startPos > FlxG.sound.music.length + extraStuff)
+					if (this.startPos < FlxG.sound.music.length + extraStuff)
 					{
 						curPart = part;
 						break;

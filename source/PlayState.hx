@@ -1422,6 +1422,34 @@ class PlayState extends MusicBeatState
 	{
 		if (time < 0)
 			time = 0;
+		if (SONG.hasExtraParts)
+		{
+			var extraTime = 0.0;
+			for (sound in FlxG.sound.list)
+			{
+				FlxG.sound.list.remove(sound);
+			}
+			FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song, 0));
+			for (part in 0...SONG.maxParts + 1)
+			{
+				FlxG.sound.playMusic(Paths.inst(PlayState.SONG.song, part), 0);
+				if (time < FlxG.sound.music.length + extraTime)
+				{
+					curPart = part;
+					FlxG.sound.music.volume = 1;
+					if (SONG.needsVoices)
+						vocals = new FlxSound().loadEmbedded(Paths.voices(PlayState.SONG.song, curPart));
+					else
+						vocals = new FlxSound();
+
+					FlxG.sound.list.add(vocals);
+					FlxG.sound.list.add(new FlxSound().loadEmbedded(Paths.inst(PlayState.SONG.song, curPart)));
+					break;
+				}
+				extraTime += FlxG.sound.music.length;
+			}
+			extraPart = extraTime;
+		}
 
 		FlxG.sound.music.pause();
 		vocals.pause();
